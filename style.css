@@ -1,0 +1,289 @@
+body {
+    background-color: var(--color-nav) ; 
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    font-family: "Quicksand", sans-serif;
+    height: 120px;
+    background-color: white;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+.logo {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+}
+
+#titulo{
+    font-size: 35px;
+    text-align: center;
+}
+
+
+#contactos{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#contactos i {
+    margin: 0 10px;
+    font-size: 30px;
+}
+main{
+    height: fit-content;
+    margin: 25px 25px;
+    display:flex;
+    flex-direction: column;
+    font-family: "Quicksand", sans-serif;
+    flex-wrap: wrap;
+    justify-content: space-around ;
+}
+
+nav{
+    background-color: #ecb28e;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;   
+    font-weight: bolder;
+}
+
+nav a {
+    color: #FFF;
+    padding: 1% 0;
+}
+
+nav a:hover{
+    text-shadow: 2px 2px 3px #070707;
+}
+
+#secciones{
+    display:flex;
+}
+
+.recetas{
+    display: block;
+    width: 50%;
+    justify-content: space-between;
+
+}
+
+.info{
+    width: 70%;
+    align-items: center;
+}
+
+.parrafo{
+    font-size: 20px;   
+    font-weight: bolder;
+}
+
+.titulo-receta{
+    font-size: 25px;
+    text-decoration: underline;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 5px;
+    font-style: normal;
+}
+
+ol li {
+    padding-top: 10px;
+}
+
+.info{
+    margin-bottom: 10%;
+}
+
+.info ul{
+    text-decoration: underline;
+}
+
+.info ul li {
+    padding-top: 10px;
+}
+
+#tarjetas{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    height: 25rem;
+}
+
+.card img{
+    width:100%;
+    height: 30%;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between  ;
+}
+
+.card-body p{
+    font-size: 12px;
+}
+
+footer{
+    font-family: "Quicksand", sans-serif;
+    height: 220px;
+    background-color: white;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items: center;
+}
+
+
+/**Boton WSP**/
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #36c96c;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    transition: 0.2s; }
+
+.float .my-float {
+    margin-top: 16px; }
+
+.float:hover {
+    color: #FFF;
+    transform: translateY(-5PX);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.604); 
+}
+
+
+/**Formulario Contacto**/
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    font-family: 'Bebas Neue'; 
+    margin:auto;
+    padding: 100px 0;
+    
+    h1{
+        text-align: center;
+        font-weight: 700;
+    }
+
+    form{
+        background: rgba(255, 255, 255, 0.967);
+        padding: 40px ;
+        box-shadow: 0 0 6px #fafafa;
+        border-radius: 10px;
+    
+        .grupo{
+            position: relative;
+            margin: 45px;
+        }
+        input:focus~label,
+        input:valid~label{
+        top: -14px;
+        font-size: 14px;
+        color: black;
+        }
+    
+    
+        button{
+            font-family: 'Bebas Neue';
+            font-size: 20px; 
+            border:black;
+            border-radius: 2px;
+            padding: 5px;
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            cursor: pointer;
+        
+        }
+        
+        label{
+            color: #888a88;
+            font-size: 17px;
+            position: absolute;
+            left: 5px;
+            top: 10px;
+            transition: 0.5s ease-in-out all;
+            pointer-events: none;
+        }
+        
+        input{
+        display: block;
+        background: none;
+        color: #404243;
+        font-size: 18px;
+        padding: 10px 10px 10px 5px;
+        border:none ;
+        border-bottom: 1px solid #444141;
+    
+        &:focus{
+            outline: none;
+            color:#cfd8dc;
+        }
+        }
+      
+        .barra{
+        position: relative;
+        display: block;
+        width: 100%;
+
+        &:before{
+            content: "";
+            height: 2px ;
+            width: 0%;
+            bottom: 0;
+            position: absolute;
+            background: #110d61;
+            transition: 0.3s ease width ;
+            left: 0;
+        }
+        &input:focus~.barra:before{
+            width: 100%;
+        }
+        }   
+
+        button{
+            font-size: 20px; 
+            border:black;
+            border-radius: 2px;
+            padding: 5px;
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            cursor: pointer;
+        }  
+    
+   
+    }
+    
+}
+
+
